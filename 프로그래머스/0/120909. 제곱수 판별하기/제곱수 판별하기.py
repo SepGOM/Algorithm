@@ -1,13 +1,7 @@
-from math import sqrt
-
 def solution(n):
     answer = 0
     
-    a, b = divmod(sqrt(n), 1)
-    
-    if b > 0 :
-        answer = 2
+    if n ** 0.5 == int(n ** 0.5):
+        return 1
     else:
-        answer = 1
-    
-    return answer
+        return 2
