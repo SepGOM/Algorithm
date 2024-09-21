@@ -1,6 +1,8 @@
 def solution(my_string):
+    answer = []
     
-    for i in 'abcdefghijklmnopqrstuvwxyz':
-        my_string = my_string.replace(i, '')        
+    for i in my_string:
+        if i.isnumeric():
+            answer.append(int(i))        
     
-    return list(sorted(map(int,str(my_string))))
+    return sorted(answer)
